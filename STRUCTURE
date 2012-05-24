@@ -1,0 +1,70 @@
+<div id="archive-org-container">
+  <div class="header-bar">
+    <i class="icon icon-archive"></i>
+    <span class="title">Moving Images from Archive.org</span>
+  </div>
+  <nav class="nav">
+    <ul class="tabs">
+      <li><a href="#featured"><i class="icon icon-featured"></i>Featured</a></li>
+      <li><a href="#featured"><i class="icon icon-collection"></i>Collections</a></li>
+      <li><a href="#featured"><i class="icon icon-collection"></i>Collections</a></li>
+    </ul>
+  </nav>
+  <section class="main">
+  <div class="tab-panels">
+    <div id="featured"></div>
+    <div id="collections"></div>
+    <div id="more"></div>
+  </div>
+  </section><!-- .main -->
+  <section class="search">
+    <div class="search-container">
+      <input class="search" type="search" />
+    </div>
+  </section>
+</div>
+
+FEATURED
+------------
+{{ #items }}
+  <div class="box">
+    <p class="video-title">{{ videoTitle }}</p>
+    <p class="video-time">{{ videoTime }}</p>
+    <div class="video-preview">{{ videoPreview }}</div>
+    <p class="date-uploaded">{{ dateUploaded }}</p>
+  </div>
+{ /items }}
+
+DETAIL
+---------------
+<div class="third"
+  <div class="video-preview">{{ videoPreview }}</div>
+  <p class="video-time">{{ videoTime }}</p>
+  <div class="tags">
+  {{ #tags }}
+    <button class="btn btn-tags">{{ tagName }}</button>
+  {{ /tags }}
+  </div>
+</div>
+<div class="twothirds">
+  <h3>{{ videoTitle }}</h3>
+  <div class="video-description">{{ videoDesc }}</div>
+  <div class="file-types">
+  {{ #fileTypes }}
+    <button class="btn dark btn-filetypes">{{ fileType }}</button>
+  {{ /fileTypes }}
+  </div>
+</div>
+
+COLLECTIONS
+------------
+<div class="row">
+  <h2>{{ mainCollectionTitle }}</h2>
+  <div class="wide-container">
+    <div class="main-collection-gallery">
+    {{ #mainCollection }}
+      <div class=""></div>
+    {{/mainCollection}}
+    </div>
+  </div>
+
